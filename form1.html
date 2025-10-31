@@ -1,0 +1,92 @@
+<!--this file shows a "Hotel Feedback Form" totally build using HTML-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hotel Feedback Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hotel Feedback Form</h1>
+      <p>
+        Thank you for staying with us. Please provide feedback on your recent
+        stay. <!--  greetings massage-->
+      </p>
+    </header>
+    <main>
+      <form method="POST" action="https://hotel-feedback.com"> <!--form that can not be posted right now-->
+        <fieldset> <!--first fieldset where personal information like name, emal and age(optional) will be found-->
+          <legend>Personal Information</legend>
+          <label for="full-name">Name <sup>*</sup>:</label> <!--name button which is required-->
+          <input type="text" id="full-name" name="name" placeholder="e.g., John Doe" required size="20">
+
+          <label for="email">Email address <sup>*</sup>:</label> <!--email button which is required-->
+          <input placeholder="example@email.com" required id="email" type="email" name="email" size="20"
+          />
+          <label for="age">Age (optional):</label><!--age button which is optional-->
+          <input placeholder="e.g., 3"type="number" name="age" id="age" min="3" max="100" /> <!--min and max age limit-->
+        </fieldset>
+
+        <fieldset> <!--second fieldset that asks whether the person is new at this hotel or not-->
+          <legend>Was this your first time at our hotel?</legend>
+          <input checked id="yes-option" type="radio" name="hotel-stay" /> <!--yes ratio button which is checked by default-->
+          <label for="yes-option">Yes</label>
+          <input id="no-option" type="radio" name="hotel-stay" /> <!--no ratio button-->
+          <label for="no-option">No</label>
+        </fieldset>
+
+        <fieldset> <!--third fieldset that asks why the person chose this hotel-->
+          <legend>
+            Why did you choose to stay at our hotel? (Check all that apply)
+          </legend>
+
+          <input type="checkbox" id="ads" name="ads" value="ads" /> <!--checkbox buttons for option "Social Media Ads"-->
+          <label for="ads">Social Media Ads</label>
+
+          <input type="checkbox" id="recommendation" name="recommendation" value="recommendation"/> <!--checkbox buttons for option "Personal Recommendation"-->
+          <label for="recommendation">Personal Recommendation</label>
+          
+          <input type="checkbox" id="location" name="location" value="location" /> <!--checkbox buttons for option "Location"-->
+          <label for="location">Location</label>
+
+          <input checked type="checkbox" id="reputation" name="reputation" value="reputation"/> <!--checkbox buttons for option "Reputation" which is checked by default--> 
+          <label for="reputation">Reputation</label>
+          
+          <input type="checkbox" id="price" name="price" value="price" /> <!--checkbox buttons for option "Price"-->
+          <label for="price">Price</label>
+        </fieldset>
+
+        <fieldset> <!--fourth fieldset that asks for ratings about service and food-->
+          <legend>Ratings</legend>
+
+          <label for="service">How was the service?</label>
+
+          <select name="service" id="service"> <!--dropdown menu for rating service-->
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option selected value="excellent">Excellent</option> <!--"Excellent" is selected by default-->
+          </select>
+
+          <label for="food">How was the food?</label>
+
+          <select name="food" id="food"> <!--dropdown menu for rating food-->
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option selected value="excellent">Excellent</option> <!--"Excellent" is selected by default-->
+          </select>
+        </fieldset>
+
+        <label for="comments">Other Comments?</label> <!--label for text area for additional comments-->
+        <textarea placeholder="e.g., It was awesome staying here. we had a......"cols="30" rows="10" name="comments" id="comments"></textarea> <!--text area for additional comments-->
+
+        <button type="submit">Submit</button> <!--submit button to submit the form-->
+      </form>
+    </main>
+  </body>
+</html>
+<!--end of the html file-->
