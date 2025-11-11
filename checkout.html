@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Checkout Page</title>
+</head>
+
+<body>
+  <h1>Checkout</h1>
+  <section>
+      <h2>Your Cart</h2>
+      <img alt="An unarranged 4x4 Rubik's Cube" src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg">
+      <h3>4x4 Rubik's Cube</h3>
+      <h3>$19.99</h3>
+  </section>
+  <section>
+      <h2>Payment Information</h2>
+      <form>
+          <label for="card-name">Cardholder's Name<span aria-hidden="true">*</span></label>
+          <input required id="card-name" name="card-name" type="text"><br/>
+           <label for="card-number">Card Number<span aria-hidden="true">*</span></label>
+          <input required id="card-number" name="card-number" type="text" aria-describedby="card-number-help">
+          <p id="card-number-help">Please enter 16-digit card number for smooth payment</p>
+          <button type="button">Pay Now</button>
+      </form>
+  </section>
+</body>
+</html>
